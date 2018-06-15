@@ -1,0 +1,211 @@
+.Random-Article-Link {
+    text-align: center;
+    display: block;
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: #2681e8
+}
+
+.Random-Article-Link :focus,
+.Random-Article-Link:hover {
+    color: #1e67b9
+}
+
+.article-search-form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.article-search-form__title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 15px auto;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    cursor: pointer
+}
+
+.article-search-form__input {
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin: 15px auto;
+    text-align: center;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #ccc;
+    -webkit-appearance: none
+}
+
+.article-search-form__input:focus {
+    border: 2px solid #2681e8
+}
+
+.article-view {
+    overflow: hidden;
+    text-align: left;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #343a40;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-transition: -webkit-box-shadow .2s ease-in-out;
+    transition: -webkit-box-shadow .2s ease-in-out;
+    -o-transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+    position: relative
+}
+
+.article-view:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    background-color: #2681e8;
+    content: "";
+    z-index: 20;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out
+}
+
+.article-view:focus,
+.article-view:hover {
+    text-decoration: none;
+    color: #343a40;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+    outline: none
+}
+
+.article-view:focus:before,
+.article-view:hover:before {
+    opacity: 1
+}
+
+.article-view__title {
+    text-align: inherit;
+    margin-top: 0;
+    margin-bottom: 18px
+}
+
+.article-view__snippet {
+    text-align: inherit;
+    margin-top: 0;
+    margin-bottom: 3px
+}
+
+span.searchmatch {
+    font-weight: 700;
+    font-style: italic
+}
+
+.article-list {
+    margin-top: 20px
+}
+
+.article-list .article-view {
+    margin-bottom: 20px
+}
+
+.article-list .loader {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.article-list__message {
+    text-align: center
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: loader-spin 1.5s linear infinite;
+    animation: loader-spin 1.5s linear infinite;
+    position: absolute;
+    left: 45%;
+}
+
+@-webkit-keyframes loader-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes loader-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+.app {
+    position: absolute;
+    top: 40vh;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 15px;
+    right: 15px
+}
+
+.app--focus {
+    top: 10vh;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    padding-bottom: 10vh
+}
+
+#root {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+@media (min-width: 576px) {
+    #root {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    #root {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    #root {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #root {
+        max-width: 1140px;
+    }
+}
